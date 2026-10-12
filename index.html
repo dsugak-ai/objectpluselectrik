@@ -1,44 +1,153 @@
 <!DOCTYPE html>
-
 <html lang="ru">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<!-- SEO Meta Tags -->
-<title>Объект+ | Смета для электрика и монтажника за 2 минуты</title>
-<meta content="Составьте смету на электромонтаж и слаботочные системы прямо на объекте. Офлайн-калькулятор с умными ценами, визардом, расчётом материалов и поддержкой умного дома (Wiren Board, Xiaomi). Без подписок." name="description"/>
-<meta content="смета электрика, калькулятор электромонтажа, программа для смет, расчёт материалов, умный дом wiren board, смета на проводку, приложение для монтажника" name="keywords"/>
-<meta content="Объект+" name="author"/>
-<!-- Open Graph -->
-<meta content="Объект+ | Смета для электрика за 2 минуты" property="og:title"/>
-<meta content="Визард, умные цены, расчёт материалов, умный дом. Всё офлайн, без подписок." property="og:description"/>
-<meta content="website" property="og:type"/>
-<meta content="https://dsugak-ai.github.io/objectpluselectrik/" property="og:url"/>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-<style>
-        .gradient-bg { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
-        .gradient-text { background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    
+    <!-- SEO Meta Tags -->
+    <title>Объект+ | Смета для электрика и монтажника за 2 минуты</title>
+    <meta content="Составьте смету на электромонтаж и слаботочные системы прямо на объекте. Офлайн-калькулятор с умными ценами, визардом, расчётом материалов и поддержкой умного дома (Wiren Board, Xiaomi). Без подписок." name="description"/>
+    <meta content="смета электрика, калькулятор электромонтажа, программа для смет, расчёт материалов, умный дом wiren board, смета на проводку, приложение для монтажника" name="keywords"/>
+    <meta content="Объект+" name="author"/>
+    
+    <!-- Open Graph -->
+    <meta content="Объект+ | Смета для электрика за 2 минуты" property="og:title"/>
+    <meta content="Визард, умные цены, расчёт материалов, умный дом. Всё офлайн, без подписок." property="og:description"/>
+    <meta content="website" property="og:type"/>
+    <meta content="https://dsugak-ai.github.io/objectpluselectrik/" property="og:url"/>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    
+    <style>
+        :root {
+            --ink: #332821;
+            --muted: #82746e;
+            --coral: #c77964;
+            --cream: #fffaf6;
+            --peach: #fce7de;
+        }
         
-        /* Мокап телефона */
-
-.phone-screen {
-            width: 100%;
-            height: 100%;
-            background: #f3f4f6;
-            border-radius: 26px;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
+        html { scroll-behavior: smooth; }
+        
+        body {
+            background: var(--cream) !important;
+            color: var(--ink) !important;
+            font-family: 'Inter', system-ui, -apple-system, Arial, sans-serif !important;
+            margin: 0;
+            line-height: 1.5;
         }
 
-/* Бейдж "Скоро" */
+        /* Шапка с безопасным блюром для Chrome */
+        header {
+            background: rgba(255, 250, 246, 0.91) !important;
+            -webkit-backdrop-filter: blur(18px);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid #f0e5df;
+            box-shadow: none !important;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        
+        header .text-blue-800 { color: var(--ink) !important; }
+        header .text-blue-500 { color: var(--coral) !important; }
+        
+        /* Кнопки */
+        header a.bg-blue-600, .bg-green-500, .bg-blue-600 {
+            background: var(--coral) !important;
+            color: white !important;
+            border-radius: 18px !important;
+            box-shadow: 0 12px 28px rgba(199, 121, 100, 0.22) !important;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+        header a.bg-blue-600:hover, .bg-green-500:hover { background: #ac604e !important; }
+
+        /* Hero секция */
+        .gradient-bg {
+            background: radial-gradient(circle at 5% 5%, #f8e8de 0, transparent 28%),
+                        radial-gradient(circle at 92% 85%, #f8e8de 0, transparent 32%),
+                        linear-gradient(135deg, #fffaf6, #fff5ef) !important;
+            color: var(--ink) !important;
+            position: relative;
+            overflow: hidden;
+        }
+        .gradient-bg::after {
+            content: ' ';
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            right: 8%;
+            top: 18%;
+            opacity: 0.5;
+            background-image: radial-gradient(#dfb9a9 2px, transparent 2px);
+            background-size: 18px 18px;
+            pointer-events: none;
+        }
+        .gradient-bg h1 {
+            font-size: clamp(2.5rem, 5vw, 5.2rem);
+            letter-spacing: -0.055em;
+            line-height: 1.09;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            color: var(--ink) !important;
+        }
+        .gradient-bg h1::after { content: ' ✦'; color: var(--coral); }
+        .gradient-bg p, .text-blue-100, .text-blue-200 { color: var(--muted) !important; }
+        
+        .gradient-bg a.bg-white {
+            background: white !important;
+            color: var(--ink) !important;
+            border: 1px solid #eadbd3;
+            border-radius: 18px !important;
+            box-shadow: 0 12px 30px rgba(96, 64, 43, 0.08) !important;
+            text-decoration: none;
+        }
+
+        /* Секции */
+        #features { background: #fffdfb !important; }
+        #features h2, #how-it-works h2 { letter-spacing: -0.04em; color: var(--ink) !important; }
+        
+        #features .space-y-24 > div {
+            background: linear-gradient(145deg, #fff, #fffaf6);
+            padding: clamp(22px, 4vw, 60px);
+            border-radius: 38px;
+            border: 1px solid #f1e5de;
+            box-shadow: 0 20px 60px rgba(86, 57, 43, 0.04);
+        }
+        #features .space-y-24 { display: grid; gap: 34px; }
+        #features h3 { letter-spacing: -0.04em; color: var(--ink) !important; font-size: clamp(1.7rem, 3vw, 2.5rem); margin-top: 0; }
+        #features p, #features li, .text-gray-600, .text-gray-700 { color: #776b65 !important; }
+        
+        #features .text-blue-600, #features .text-purple-600, #features .text-green-600, 
+        #features .text-orange-600, #features .text-cyan-600, #features .text-red-600 { color: var(--coral) !important; }
+        #features li i { color: var(--coral) !important; margin-right: 8px; }
+
+        /* Изображения (защита от разъезжания, если Tailwind не загрузился) */
+        .feature-image {
+            display: block;
+            width: 100%;
+            max-width: 390px;
+            height: auto;
+            object-fit: contain;
+            margin: 0 auto;
+            border: 0;
+            background: transparent;
+            box-shadow: none;
+            border-radius: 0;
+        }
+
         .badge-soon {
             display: inline-block;
-            background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
-            color: white;
+            background: #fbe3d7;
+            color: #aa604e;
+            border: 1px solid #efcbbd;
             font-size: 11px;
             font-weight: 700;
             padding: 3px 10px;
@@ -46,246 +155,231 @@
             margin-left: 8px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            vertical-align: middle;
         }
 
-        :root {--ink:#332821;--muted:#82746e;--coral:#c77964;--cream:#fffaf6;--peach:#fce7de;}
-        html {scroll-behavior:smooth}
-        body {background:var(--cream)!important;color:var(--ink)!important;font-family:Inter,system-ui,-apple-system,Arial,sans-serif!important}
-        header {background:rgba(255,250,246,.91)!important;backdrop-filter:blur(18px);border-bottom:1px solid #f0e5df;box-shadow:none!important}
-        header .text-blue-800,header .text-blue-500 {color:var(--ink)!important}
-        header .text-blue-500 {color:var(--coral)!important}
-        header a.bg-blue-600,.bg-green-500,.bg-blue-600 {background:var(--coral)!important;color:white!important;border-radius:18px!important;box-shadow:0 12px 28px #c7796438!important}
-        header a.bg-blue-600:hover,.bg-green-500:hover {background:#ac604e!important}
-        .gradient-bg {background:radial-gradient(circle at 5% 5%,#f8e8de 0,transparent 28%),radial-gradient(circle at 92% 85%,#f8e8de 0,transparent 32%),linear-gradient(135deg,#fffaf6,#fff5ef)!important;color:var(--ink)!important;position:relative;overflow:hidden}
-        .gradient-bg:after {content:' ';position:absolute;width:120px;height:120px;right:8%;top:18%;opacity:.5;background-image:radial-gradient(#dfb9a9 2px,transparent 2px);background-size:18px 18px;pointer-events:none}
-        .gradient-bg h1 {font-size:clamp(2.5rem,5vw,5.2rem);letter-spacing:-.055em;line-height:1.09;max-width:1000px;margin-left:auto;margin-right:auto}
-        .gradient-bg h1:after {content:' ✦';color:var(--coral)}
-        .gradient-bg p,.text-blue-100,.text-blue-200 {color:var(--muted)!important}
-        .gradient-bg a.bg-white {background:white!important;color:var(--ink)!important;border:1px solid #eadbd3;border-radius:18px!important;box-shadow:0 12px 30px #60402b14!important}
-        #features {background:#fffdfb!important}
-        #features h2,#how-it-works h2 {letter-spacing:-.04em;color:var(--ink)!important}
-        #features .space-y-24>div {background:linear-gradient(145deg,#fff,#fffaf6);padding:clamp(22px,4vw,60px);border-radius:38px;border:1px solid #f1e5de;box-shadow:0 20px 60px #56392b0b;gap:clamp(24px,5vw,70px)}
-        #features .space-y-24 {display:grid;gap:34px}
-        #features h3 {letter-spacing:-.04em;color:var(--ink)!important;font-size:clamp(1.7rem,3vw,2.5rem)}
-        #features p,#features li,.text-gray-600,.text-gray-700 {color:#776b65!important}
-        #features .text-blue-600,#features .text-purple-600,#features .text-green-600,#features .text-orange-600,#features .text-cyan-600,#features .text-red-600 {color:var(--coral)!important}
-        #features li i {color:var(--coral)!important}
+        #how-it-works { background: #fcf0e9 !important; }
+        #how-it-works .text-blue-200 { color: #dca28f !important; }
+        #how-it-works .text-gray-300 { color: #c77964 !important; }
+        
+        .bg-blue-900 { background: #3b2c26 !important; color: white !important; }
+        .bg-blue-900 h2 { letter-spacing: -0.035em; color: white !important; }
+        
+        footer { background: #2b221e !important; color: #a89f9a !important; }
+        footer a { color: #a89f9a !important; text-decoration: none; transition: color 0.2s; }
+        footer a:hover { color: white !important; }
+        
+        a:focus-visible { outline: 3px solid #c77964; outline-offset: 3px; }
 
-.phone-notch {width:100px;height:22px;border-radius:0 0 18px 18px}
-
-.badge-soon {background:#fbe3d7;color:#aa604e;border:1px solid #efcbbd}
-        #how-it-works {background:#fcf0e9!important}
-        #how-it-works .text-blue-200 {color:#dca28f!important}
-        #how-it-works .text-gray-300 {color:#c77964!important}
-        .bg-blue-900 {background:#3b2c26!important}
-        .bg-blue-900 h2 {letter-spacing:-.035em}
-        footer {background:#2b221e!important}
-        a:focus-visible {outline:3px solid #c77964;outline-offset:3px}
-        @media(max-width:767px) {#features .space-y-24>div {padding:25px 18px;border-radius:26px}.gradient-bg {padding-top:70px;padding-bottom:70px}}
-
-    
-.feature-image {display:block;width:min(100%, 390px);height:auto;object-fit:contain;margin-inline:auto;border:0;background:transparent;box-shadow:none;border-radius:0;}
-</style>
+        /* Мобильная адаптация */
+        @media (max-width: 767px) {
+            #features .space-y-24 > div { padding: 25px 18px; border-radius: 26px; }
+            .gradient-bg { padding-top: 70px; padding-bottom: 70px; }
+            .gradient-bg h1 { font-size: 2.2rem; }
+        }
+   
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body>
+
 <!-- Шапка -->
-<header class="bg-white shadow-sm sticky top-0 z-50">
-<div class="container mx-auto px-4 py-4 flex justify-between items-center">
-<div class="text-2xl font-bold text-blue-800">Объект<span class="text-blue-500">+</span></div>
-<nav class="hidden md:flex space-x-6">
-<a class="hover:text-blue-600 transition" href="#features">Возможности</a>
-<a class="hover:text-blue-600 transition" href="#how-it-works">Как это работает</a>
-<a class="hover:text-blue-600 transition" href="privacy.html">Политика</a>
-</nav>
-<a class="bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-blue-700 transition" href="#download">Скачать</a>
-</div>
+<header>
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="text-2xl font-bold">Объект<span style="color: var(--coral) !important;">+</span></div>
+        <nav class="hidden md:flex space-x-6">
+            <a class="hover:text-[var(--coral)] transition" href="#features" style="color: var(--ink); text-decoration: none;">Возможности</a>
+            <a class="hover:text-[var(--coral)] transition" href="#how-it-works" style="color: var(--ink); text-decoration: none;">Как это работает</a>
+            <a class="hover:text-[var(--coral)] transition" href="privacy.html" style="color: var(--ink); text-decoration: none;">Политика</a>
+        </nav>
+        <a class="bg-blue-600 px-5 py-2 font-semibold" href="#download" style="text-decoration: none;">Скачать</a>
+    </div>
 </header>
+
 <!-- Hero -->
-<section class="gradient-bg text-white py-20">
-<div class="container mx-auto px-4 text-center">
-<h1 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
-                Смета электрика <br class="hidden md:block"/>за 2 минуты прямо на объекте
-            </h1>
-<p class="text-xl md:text-2xl mb-10 text-blue-100 max-w-3xl mx-auto">
-                Работы, материалы, прибыль и умный дом — в одном приложении. Без сложных таблиц, подписок и регистрации.
-            </p>
-<div class="flex flex-col md:flex-row justify-center gap-4" id="download">
-<a class="bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-4 px-8 rounded-xl shadow-lg transition flex items-center justify-center gap-3" href="app-release.apk">
-<i class="fa-brands fa-android text-2xl"></i> Скачать APK
-                </a>
-<a class="bg-white text-blue-800 hover:bg-gray-100 text-lg font-bold py-4 px-8 rounded-xl shadow-lg transition flex items-center justify-center gap-3" href="https://www.rustore.ru/catalog/com.lunastudio.objectplus" target="_blank">
-<i class="fa-solid fa-store text-2xl"></i> Скачать в RuStore
-                </a>
-</div>
-<p class="mt-4 text-sm text-blue-200">Бесплатно. Без скрытых подписок.</p>
-</div>
-</section>
-<!-- 6 фич с мокапами -->
-<section class="py-20 bg-white" id="features">
-<div class="container mx-auto px-4">
-<h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">Всё, что нужно мастеру</h2>
-<p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto">От первого замера до готовой сметы — всё под рукой.</p>
-<div class="space-y-24">
-<!-- Фича 1: Смета за 2 минуты -->
-<div class="flex flex-col md:flex-row items-center gap-12">
-<div class="flex-1 order-2 md:order-1">
-<div class="inline-block text-blue-600 font-bold text-sm mb-2">01 / ВИЗАРД</div>
-<h3 class="text-3xl font-bold mb-4 text-gray-900">Смета за 2 минуты</h3>
-<p class="text-lg text-gray-600 mb-4">
-                            Визард сам соберёт <strong>40–60 позиций</strong> по нормативам. Выберите тип объекта, пакет и комнаты — приложение сделает остальное.
-                        </p>
-<ul class="space-y-2 text-gray-700">
-<li><i class="fa-solid fa-check text-green-500 mr-2"></i> Черновой и чистовой монтаж</li>
-<li><i class="fa-solid fa-check text-green-500 mr-2"></i> Сборка щита и защита</li>
-<li><i class="fa-solid fa-check text-green-500 mr-2"></i> Правильные единицы (м, шт, м²)</li>
-</ul>
-</div>
-<div class="flex-shrink-0 order-1 md:order-2">
-<img alt="Визард сметы" class="feature-image" src="screens/01-wizard.png"/>
-</div>
-</div>
-<!-- Фича 2: Готовый документ -->
-<div class="flex flex-col md:flex-row-reverse items-center gap-12">
-<div class="flex-1 order-2 md:order-1">
-<div class="inline-block text-purple-600 font-bold text-sm mb-2">02 / ЭКСПОРТ</div>
-<h3 class="text-3xl font-bold mb-4 text-gray-900">Готовый документ</h3>
-<p class="text-lg text-gray-600 mb-4">
-                            Черновой монтаж, чистовой, щит — <strong>всё по блокам</strong>. Экспортируйте в PDF и отправляйте клиенту прямо с объекта.
-                        </p>
-<ul class="space-y-2 text-gray-700">
-<li><i class="fa-solid fa-check text-green-500 mr-2"></i> Группировка по этапам работ</li>
-<li><i class="fa-solid fa-check text-green-500 mr-2"></i> PDF, Excel, текстовый формат</li>
-<li><i class="fa-solid fa-check text-green-500 mr-2"></i> Отправка в WhatsApp в 1 клик</li>
-</ul>
-</div>
-<div class="flex-shrink-0 order-1 md:order-2">
-<img alt="Предпросмотр сметы" class="feature-image" src="screens/02-preview.png"/>
-</div>
-</div>
-<!-- Фича 3: Прибыль и маржа -->
-<div class="flex flex-col md:flex-row items-center gap-12">
-<div class="flex-1 order-2 md:order-1">
-<div class="inline-block text-green-600 font-bold text-sm mb-2">03 / ФИНАНСЫ</div>
-<h3 class="text-3xl font-bold mb-4 text-gray-900">Прибыль и маржа</h3>
-<p class="text-lg text-gray-600 mb-4">
-                            Видно сразу, а не в конце месяца. Учитывайте расходы на материалы, бензин и доставку — приложение покажет <strong>чистую прибыль</strong> по каждому объекту.
-                        </p>
-<ul class="space-y-2 text-gray-700">
-<li><i class="fa-solid fa-check text-green-500 mr-2"></i> Учёт расходов в реальном времени</li>
-<li><i class="fa-solid fa-check text-green-500 mr-2"></i> Расчёт маржинальности</li>
-<li><i class="fa-solid fa-check text-green-500 mr-2"></i> История по всем проектам</li>
-</ul>
-</div>
-<div class="flex-shrink-0 order-1 md:order-2">
-<img alt="Экран прибыли" class="feature-image" src="screens/03-profit.png"/>
-</div>
-</div>
-<!-- Фича 4: Умные цены -->
-<div class="flex flex-col md:flex-row-reverse items-center gap-12">
-<div class="flex-1 order-2 md:order-1">
-<div class="inline-block text-orange-600 font-bold text-sm mb-2">04 / ПЕРСОНАЛИЗАЦИЯ</div>
-<h3 class="text-3xl font-bold mb-4 text-gray-900">Умные цены</h3>
-<p class="text-lg text-gray-600 mb-4">
-                            Изменили один раз — <strong>запомнилось навсегда</strong>. Приложение учится на ваших привычках и подставляет ваши расценки автоматически.
-                        </p>
-<ul class="space-y-2 text-gray-700">
-<li><i class="fa-solid fa-check text-green-500 mr-2"></i> Глобальное переопределение цен</li>
-<li><i class="fa-solid fa-check text-green-500 mr-2"></i> Без дублей в справочнике</li>
-<li><i class="fa-solid fa-check text-green-500 mr-2"></i> Работает в визарде и при ручном добавлении</li>
-</ul>
-</div>
-<div class="flex-shrink-0 order-1 md:order-2">
-<img alt="Редактирование расценок" class="feature-image" src="screens/04-edit-price.png"/>
-</div>
-</div>
-<!-- Фича 5: Калькулятор материалов -->
-<div class="flex flex-col md:flex-row items-center gap-12">
-<div class="flex-1 order-2 md:order-1">
-<div class="inline-block text-cyan-600 font-bold text-sm mb-2">05 / МАТЕРИАЛЫ <span class="badge-soon">Скоро</span></div>
-<h3 class="text-3xl font-bold mb-4 text-gray-900">Калькулятор материалов</h3>
-<p class="text-lg text-gray-600 mb-4">
-                            Не купите лишнего и не забудете нужное. На основе сметы работ приложение поможет рассчитать <strong>необходимое количество</strong> кабеля, подрозетников, автоматов и гофры.
-                        </p>
-<ul class="space-y-2 text-gray-700">
-<li><i class="fa-solid fa-check text-green-500 mr-2"></i> Автоматический расчёт по смете</li>
-<li><i class="fa-solid fa-check text-green-500 mr-2"></i> Кабель, подрозетники, автоматы, гофра</li>
-<li><i class="fa-solid fa-check text-green-500 mr-2"></i> Экспорт списка закупок</li>
-</ul>
-</div>
-<div class="flex-shrink-0 order-1 md:order-2">
-<img alt="Расчёт материалов" class="feature-image" src="screens/05-calculate.png"/>
-</div>
-</div>
-<!-- Фича 6: Умный дом -->
-<div class="flex flex-col md:flex-row-reverse items-center gap-12">
-<div class="flex-1 order-2 md:order-1">
-<div class="inline-block text-red-600 font-bold text-sm mb-2">
-                            06 / УМНЫЙ ДОМ
-                            <span class="badge-soon">Скоро</span>
-</div>
-<h3 class="text-3xl font-bold mb-4 text-gray-900">Умный дом под ключ</h3>
-<p class="text-lg text-gray-600 mb-4">
-                            Начните с <strong>Яндекс Алисы, Xiaomi или Wiren Board</strong>. Отдельный визард учтёт оборудование, монтаж, настройку сети и стоимость сценариев.
-                        </p>
-<ul class="space-y-2 text-gray-700">
-<li><i class="fa-solid fa-check text-green-500 mr-2"></i> Экосистемы: Яндекс, Xiaomi, Wiren Board</li>
-<li><i class="fa-solid fa-check text-green-500 mr-2"></i> Датчики и сценарии</li>
-<li><i class="fa-solid fa-check text-green-500 mr-2"></i> Базовый, стандартный и премиум-уровни настройки</li>
-</ul>
-</div>
-<div class="flex-shrink-0 order-1 md:order-2">
-<img alt="Визард умного дома" class="feature-image" src="screens/06-wizard-smart-home.png"/>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Как это работает -->
-<section class="py-16 bg-gray-50" id="how-it-works">
-<div class="container mx-auto px-4">
-<h2 class="text-3xl font-bold text-center mb-12 text-gray-900">3 шага до готового документа</h2>
-<div class="flex flex-col md:flex-row justify-center items-center gap-8 text-center">
-<div class="flex-1 max-w-xs">
-<div class="text-5xl font-black text-blue-200 mb-4">01</div>
-<h4 class="text-xl font-bold mb-2">Выберите параметры</h4>
-<p class="text-gray-600">Укажите тип объекта, площадь и уровень комплектации.</p>
-</div>
-<div class="hidden md:block text-4xl text-gray-300"><i class="fa-solid fa-arrow-right"></i></div>
-<div class="flex-1 max-w-xs">
-<div class="text-5xl font-black text-blue-200 mb-4">02</div>
-<h4 class="text-xl font-bold mb-2">Скорректируйте цены</h4>
-<p class="text-gray-600">Приложение подставит региональные расценки. При необходимости поправьте их.</p>
-</div>
-<div class="hidden md:block text-4xl text-gray-300"><i class="fa-solid fa-arrow-right"></i></div>
-<div class="flex-1 max-w-xs">
-<div class="text-5xl font-black text-blue-200 mb-4">03</div>
-<h4 class="text-xl font-bold mb-2">Отправьте клиенту</h4>
-<p class="text-gray-600">Экспортируйте смету в PDF и отправьте в WhatsApp.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- CTA -->
-<section class="py-16 bg-blue-900 text-white text-center">
-<div class="container mx-auto px-4">
-<h2 class="text-3xl font-bold mb-6">Хватит тратить вечера на Excel</h2>
-<p class="text-xl mb-8 text-blue-200">Скачайте приложение и сделайте первую смету за 2 минуты.</p>
-<a class="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-4 px-10 rounded-xl shadow-lg transition" href="app-release.apk">
-                Скачать APK бесплатно
+<section class="gradient-bg py-20">
+    <div class="container mx-auto px-4 text-center">
+        <h1 class="mb-6">
+            Смета электрика <br class="hidden md:block"/>за 2 минуты прямо на объекте
+        </h1>
+        <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">
+            Работы, материалы, прибыль и умный дом — в одном приложении. Без сложных таблиц, подписок и регистрации.
+        </p>
+        <div class="flex flex-col md:flex-row justify-center gap-4" id="download">
+            <a class="bg-green-500 text-lg font-bold py-4 px-8" href="app-release.apk" style="text-decoration: none;">
+                <i class="fa-brands fa-android text-2xl mr-3"></i> Скачать APK
             </a>
-</div>
+            <a class="bg-white text-lg font-bold py-4 px-8" href="https://www.rustore.ru/catalog/com.lunastudio.objectplus" target="_blank" style="text-decoration: none;">
+                <i class="fa-solid fa-store text-2xl mr-3"></i> Скачать в RuStore
+            </a>
+        </div>
+        <p class="mt-4 text-sm">Бесплатно. Без скрытых подписок.</p>
+    </div>
 </section>
-<!-- Footer -->
-<footer class="bg-gray-900 text-gray-400 py-8 text-sm">
-<div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-<div class="mb-4 md:mb-0">
-                © 2026 Объект+. Все права защищены.
+
+<!-- 6 фич -->
+<section class="py-20" id="features">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Всё, что нужно мастеру</h2>
+        <p class="text-center mb-16 max-w-2xl mx-auto">От первого замера до готовой сметы — всё под рукой.</p>
+        
+        <div class="space-y-24">
+            <!-- Фича 1 -->
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="flex-1 order-2 md:order-1">
+                    <div class="inline-block font-bold text-sm mb-2" style="color: var(--coral);">01 / ВИЗАРД</div>
+                    <h3 class="mb-4">Смета за 2 минуты</h3>
+                    <p class="text-lg mb-4">Визард сам соберёт <strong>40–60 позиций</strong> по нормативам. Выберите тип объекта, пакет и комнаты — приложение сделает остальное.</p>
+                    <ul class="space-y-2 list-none pl-0">
+                        <li><i class="fa-solid fa-check"></i> Черновой и чистовой монтаж</li>
+                        <li><i class="fa-solid fa-check"></i> Сборка щита и защита</li>
+                        <li><i class="fa-solid fa-check"></i> Правильные единицы (м, шт, м²)</li>
+                    </ul>
+                </div>
+                <div class="flex-shrink-0 order-1 md:order-2 w-full md:w-auto">
+                    <img alt="Визард сметы" class="feature-image" src="screens/01-wizard.png"/>
+                </div>
             </div>
-<div class="flex space-x-6">
-<a class="hover:text-white transition" href="privacy.html">Политика конфиденциальности</a>
-<a class="hover:text-white transition" href="mailto:denis-sugackov@yandex.ru">Поддержка</a>
-</div>
-</div>
+
+            <!-- Фича 2 -->
+            <div class="flex flex-col md:flex-row-reverse items-center gap-12">
+                <div class="flex-1 order-2 md:order-1">
+                    <div class="inline-block font-bold text-sm mb-2" style="color: var(--coral);">02 / ЭКСПОРТ</div>
+                    <h3 class="mb-4">Готовый документ</h3>
+                    <p class="text-lg mb-4">Черновой монтаж, чистовой, щит — <strong>всё по блокам</strong>. Экспортируйте в PDF и отправляйте клиенту прямо с объекта.</p>
+                    <ul class="space-y-2 list-none pl-0">
+                        <li><i class="fa-solid fa-check"></i> Группировка по этапам работ</li>
+                        <li><i class="fa-solid fa-check"></i> PDF, Excel, текстовый формат</li>
+                        <li><i class="fa-solid fa-check"></i> Отправка в WhatsApp в 1 клик</li>
+                    </ul>
+                </div>
+                <div class="flex-shrink-0 order-1 md:order-2 w-full md:w-auto">
+                    <img alt="Предпросмотр сметы" class="feature-image" src="screens/02-preview.png"/>
+                </div>
+            </div>
+
+            <!-- Фича 3 -->
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="flex-1 order-2 md:order-1">
+                    <div class="inline-block font-bold text-sm mb-2" style="color: var(--coral);">03 / ФИНАНСЫ</div>
+                    <h3 class="mb-4">Прибыль и маржа</h3>
+                    <p class="text-lg mb-4">Видно сразу, а не в конце месяца. Учитывайте расходы на материалы, бензин и доставку — приложение покажет <strong>чистую прибыль</strong> по каждому объекту.</p>
+                    <ul class="space-y-2 list-none pl-0">
+                        <li><i class="fa-solid fa-check"></i> Учёт расходов в реальном времени</li>
+                        <li><i class="fa-solid fa-check"></i> Расчёт маржинальности</li>
+                        <li><i class="fa-solid fa-check"></i> История по всем проектам</li>
+                    </ul>
+                </div>
+                <div class="flex-shrink-0 order-1 md:order-2 w-full md:w-auto">
+                    <img alt="Экран прибыли" class="feature-image" src="screens/03-profit.png"/>
+                </div>
+            </div>
+
+            <!-- Фича 4 -->
+            <div class="flex flex-col md:flex-row-reverse items-center gap-12">
+                <div class="flex-1 order-2 md:order-1">
+                    <div class="inline-block font-bold text-sm mb-2" style="color: var(--coral);">04 / ПЕРСОНАЛИЗАЦИЯ</div>
+                    <h3 class="mb-4">Умные цены</h3>
+                    <p class="text-lg mb-4">Изменили один раз — <strong>запомнилось навсегда</strong>. Приложение учится на ваших привычках и подставляет ваши расценки автоматически.</p>
+                    <ul class="space-y-2 list-none pl-0">
+                        <li><i class="fa-solid fa-check"></i> Глобальное переопределение цен</li>
+                        <li><i class="fa-solid fa-check"></i> Без дублей в справочнике</li>
+                        <li><i class="fa-solid fa-check"></i> Работает в визарде и при ручном добавлении</li>
+                    </ul>
+                </div>
+                <div class="flex-shrink-0 order-1 md:order-2 w-full md:w-auto">
+                    <img alt="Редактирование расценок" class="feature-image" src="screens/04-edit-price.png"/>
+                </div>
+            </div>
+
+            <!-- Фича 5 -->
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="flex-1 order-2 md:order-1">
+                    <div class="inline-block font-bold text-sm mb-2" style="color: var(--coral);">05 / МАТЕРИАЛЫ <span class="badge-soon">Скоро</span></div>
+                    <h3 class="mb-4">Калькулятор материалов</h3>
+                    <p class="text-lg mb-4">Не купите лишнего и не забудете нужное. На основе сметы работ приложение поможет рассчитать <strong>необходимое количество</strong> кабеля, подрозетников, автоматов и гофры.</p>
+                    <ul class="space-y-2 list-none pl-0">
+                        <li><i class="fa-solid fa-check"></i> Автоматический расчёт по смете</li>
+                        <li><i class="fa-solid fa-check"></i> Кабель, подрозетники, автоматы, гофра</li>
+                        <li><i class="fa-solid fa-check"></i> Экспорт списка закупок</li>
+                    </ul>
+                </div>
+                <div class="flex-shrink-0 order-1 md:order-2 w-full md:w-auto">
+                    <img alt="Расчёт материалов" class="feature-image" src="screens/05-calculate.png"/>
+                </div>
+            </div>
+
+            <!-- Фича 6 -->
+            <div class="flex flex-col md:flex-row-reverse items-center gap-12">
+                <div class="flex-1 order-2 md:order-1">
+                    <div class="inline-block font-bold text-sm mb-2" style="color: var(--coral);">
+                        06 / УМНЫЙ ДОМ
+                        <span class="badge-soon">Скоро</span>
+                    </div>
+                    <h3 class="mb-4">Умный дом под ключ</h3>
+                    <p class="text-lg mb-4">Начните с <strong>Яндекс Алисы, Xiaomi или Wiren Board</strong>. Отдельный визард учтёт оборудование, монтаж, настройку сети и стоимость сценариев.</p>
+                    <ul class="space-y-2 list-none pl-0">
+                        <li><i class="fa-solid fa-check"></i> Экосистемы: Яндекс, Xiaomi, Wiren Board</li>
+                        <li><i class="fa-solid fa-check"></i> Датчики и сценарии</li>
+                        <li><i class="fa-solid fa-check"></i> Базовый, стандартный и премиум-уровни настройки</li>
+                    </ul>
+                </div>
+                <div class="flex-shrink-0 order-1 md:order-2 w-full md:w-auto">
+                    <img alt="Визард умного дома" class="feature-image" src="screens/06-wizard-smart-home.png"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Как это работает -->
+<section class="py-16" id="how-it-works">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">3 шага до готового документа</h2>
+        <div class="flex flex-col md:flex-row justify-center items-center gap-8 text-center">
+            <div class="flex-1 max-w-xs">
+                <div class="text-5xl font-black mb-4" style="color: #dca28f;">01</div>
+                <h4 class="text-xl font-bold mb-2">Выберите параметры</h4>
+                <p>Укажите тип объекта, площадь и уровень комплектации.</p>
+            </div>
+            <div class="hidden md:block text-4xl" style="color: #c77964;"><i class="fa-solid fa-arrow-right"></i></div>
+            <div class="flex-1 max-w-xs">
+                <div class="text-5xl font-black mb-4" style="color: #dca28f;">02</div>
+                <h4 class="text-xl font-bold mb-2">Скорректируйте цены</h4>
+                <p>Приложение подставит региональные расценки. При необходимости поправьте их.</p>
+            </div>
+            <div class="hidden md:block text-4xl" style="color: #c77964;"><i class="fa-solid fa-arrow-right"></i></div>
+            <div class="flex-1 max-w-xs">
+                <div class="text-5xl font-black mb-4" style="color: #dca28f;">03</div>
+                <h4 class="text-xl font-bold mb-2">Отправьте клиенту</h4>
+                <p>Экспортируйте смету в PDF и отправьте в WhatsApp.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="py-16 bg-blue-900 text-center">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-6">Хватит тратить вечера на Excel</h2>
+        <p class="text-xl mb-8" style="color: #dca28f;">Скачайте приложение и сделайте первую смету за 2 минуты.</p>
+        <a class="bg-green-500 text-lg font-bold py-4 px-10" href="app-release.apk" style="text-decoration: none;">
+            Скачать APK бесплатно
+        </a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-8 text-sm">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+            © 2026 Объект+. Все права защищены.
+        </div>
+        <div class="flex space-x-6">
+            <a href="privacy.html">Политика конфиденциальности</a>
+            <a href="mailto:denis-sugackov@yandex.ru">Поддержка</a>
+        </div>
+    </div>
 </footer>
+
 </body>
 </html>
